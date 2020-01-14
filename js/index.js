@@ -40,19 +40,20 @@ dragImg.addEventListener('drag', (event) => {
   dragImg.style.border = "2px solid yellow";
 });
 
-const excursion = document.querySelector('.destination');
-excursion.addEventListener('copy', (event) => {
-  event.stopPropagation();
-  alert('Copied to clipboard');
-});
-
 const signUp = document.querySelector('.btn');
-signUp.addEventListener('contextmenu', (event) => {
+signUp.addEventListener('click', (event) => {
+  event.stopPropagation();
   signUp.style.backgroundColor = "darkgray";
   signUp.style.color = "lightgray";
-});
-signUp.addEventListener('click', (event) => {
   alert("You're signed up! Pack those bags!")
+});
+
+const excursion = document.querySelector('.destination');
+excursion.addEventListener('copy', (event) => {
+  alert('Copied to clipboard');
+});
+excursion.addEventListener('click', (event) => {
+  alert('More details on the selected trip...')
 });
 
 // Nav Refresh
