@@ -9,11 +9,6 @@ body.addEventListener('keyup', (event) => {
   body.style.color = "black";
 });
 
-// const navBg = document.querySelector('header');
-// navBg.addEventListener('scroll', (event) => {
-//   navBg.style.backgroundColor = "yellow";
-// });
-
 const funBus = document.querySelector('.logo-heading');
 funBus.addEventListener('dblclick', (event) => {
   funBus.textContent = "Hop On!";
@@ -23,20 +18,11 @@ const busImg = document.querySelector('img');
 busImg.addEventListener('wheel', (event) => {
   busImg.src = "https://images.unsplash.com/photo-1547010932-0a13d4508fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
 });
-// busImg.addEventListener('resize', (event) => {
-//   alert("Resizing isn't fun!")
-// });
 
 const welcome = document.querySelector('h2');
 welcome.addEventListener('mouseleave', (event) => {
   welcome.style.fontFamily = 'Roboto';
   welcome.style.color = "goldenrod";
-});
-
-// FIX THIS!!! Select?
-const paragraphText = document.querySelector('p');
-paragraphText.addEventListener('select', (event) => {
-  paragraphText.style.background = "yellow";
 });
 
 const letsGo = document.querySelector('.text-content h2');
@@ -56,6 +42,7 @@ dragImg.addEventListener('drag', (event) => {
 
 const excursion = document.querySelector('.destination');
 excursion.addEventListener('copy', (event) => {
+  event.stopPropagation();
   alert('Copied to clipboard');
 });
 
@@ -69,3 +56,7 @@ signUp.addEventListener('click', (event) => {
 });
 
 // Nav Refresh
+const navRefresh = document.querySelector('nav');
+navRefresh.addEventListener('click', (event) => {
+  event.preventDefault();
+});
