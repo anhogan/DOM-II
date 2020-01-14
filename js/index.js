@@ -39,6 +39,9 @@ const dragImg = document.querySelector('.img-fluid');
 dragImg.addEventListener('drag', (event) => {
   dragImg.style.border = "2px solid yellow";
 });
+dragImg.addEventListener('contextmenu', (event) => {
+  alert('Visit this destination on our Island Getaway excursion. Sign up now to reserve your spot!');
+});
 
 const signUp = document.querySelector('.btn');
 signUp.addEventListener('click', (event) => {
