@@ -53,7 +53,7 @@ signUp.addEventListener('click', (event) => {
 
 const excursion = document.querySelector('.destination');
 excursion.addEventListener('copy', (event) => {
-  alert('Copied to clipboard');
+  excursion.style.color = 'red';
 });
 excursion.addEventListener('click', (event) => {
   alert('More details on the selected trip...')
